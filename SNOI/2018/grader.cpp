@@ -50,6 +50,8 @@ long long get_distance(int X, int Y) {
 	
 
 int main() {
+	freopen("sample.txt", "r", stdin);
+	freopen("ans.txt", "w", stdout);
 	scanf("%d%d%d", &N, &Q, &S);
 	for (int i = 0; i < N - 1; i++) {
 		int a, b, w;
