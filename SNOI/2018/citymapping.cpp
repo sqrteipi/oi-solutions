@@ -4,7 +4,15 @@
 using namespace std;
 void find_roads(int N, int Q, int A[], int B[], int W[]) {
 	if (Q==500000) {
-		
+		ll dists[N][N];
+		for (int i=0; i<N; i++) {
+			for (int j=i+1; j<N; j++) {
+				ll curdis = get_distance(i+1, j+1);
+				dists[i][j] = dists[j][i] = curdis;
+			}
+		}
+		ll deep = max_element(dists[0], dists[0]+N) - dists[0];
+		set<int> used;
 	}
     else {
 		// Task 3 and 4: Search for deepest node (highest weight), and search from the node
